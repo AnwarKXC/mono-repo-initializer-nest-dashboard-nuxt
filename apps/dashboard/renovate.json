@@ -1,0 +1,10 @@
+{
+  "extends": ["github>nuxt/renovate-config-nuxt"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "ignoreDeps": ["vue-tsc", "shadcn-nuxt"],
+  "baseBranches": ["main"],
+  "packageRules": [],
+  "postUpdateOptions": ["pnpmDedupe"]
+}

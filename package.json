@@ -1,0 +1,44 @@
+{
+	"name": "monorepo",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Monorepo with NestJS backend, Nuxt Dashboard, and Portfolio Frontend",
+	"scripts": {
+		"dev": "pnpm -r --parallel run dev",
+		"dev:backend": "pnpm --filter backend run start:dev",
+		"dev:dashboard": "pnpm --filter dashboard run dev",
+		"dev:frontend": "pnpm --filter frontend run dev",
+		"build": "pnpm -r run build",
+		"build:backend": "pnpm --filter backend run build",
+		"build:dashboard": "pnpm --filter dashboard run build",
+		"build:frontend": "pnpm --filter frontend run build",
+		"start": "pnpm -r --parallel run start",
+		"start:backend": "pnpm --filter backend run start:prod",
+		"format": "pnpm -r run format",
+		"format:check": "pnpm -r run format:check",
+		"test": "pnpm -r run test",
+		"clean": "pnpm -r exec -- rm -rf node_modules dist .nuxt .output",
+		"prisma:generate": "pnpm --filter backend exec prisma generate",
+		"prisma:migrate": "pnpm --filter backend exec prisma migrate dev",
+		"prisma:studio": "pnpm --filter backend exec prisma studio"
+	},
+	"keywords": [
+		"monorepo",
+		"nestjs",
+		"nuxt",
+		"prisma",
+		"typescript"
+	],
+	"author": "",
+	"license": "MIT",
+	"engines": {
+		"node": ">=20.0.0",
+		"pnpm": ">=9.0.0"
+	},
+	"packageManager": "pnpm@10.15.0",
+	"pnpm": {
+		"overrides": {
+			"better-sqlite3": "npm:empty-npm-package@1.0.0"
+		}
+	}
+}

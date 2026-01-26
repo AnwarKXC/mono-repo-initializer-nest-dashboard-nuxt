@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+**/dist/
+.output/
+**/.output/
+.nuxt/
+**/.nuxt/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Testing
+coverage/
+**/coverage/
+
+# Misc
+.turbo/
+**/.turbo/
+.cache/
+**/.cache/
+*.tsbuildinfo
+
+# Prisma
+apps/backend/src/generated/
+
+# Local data
+.data/
+**/.data/
+
+# History
+.history/
+**/.history/
+
+# Lock files in apps (use root only)
+apps/**/pnpm-lock.yaml
